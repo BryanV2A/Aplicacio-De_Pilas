@@ -39,3 +39,41 @@ class aplicacionDePilas:
     #Método para obtener el tamaño de la pila insertada
     def getTamPila(self):
         return len(self.__listaPila)
+
+    #Método encargado de comparar las pilas y generar un resultado booleano
+    def Comparar(self, PilaAux, PilaDos):
+        while True:
+            if (len(PilaAux) == len(PilaDos)):
+                for a in range(0, len(PilaAux)):
+                    if (PilaAux[a] != PilaDos[a]):
+                        return False
+            else:
+                return False
+            return True
+
+def main():
+
+    pila = aplicacionDePilas()
+
+    PilaAux = []
+    PilaAux2 = []
+    X = ["B", "R", "Y", "A", "N"]
+    Y = ["N", "A", "Y", "R", "B"]
+
+    #print('***1***')
+    #print('Tamaño de pila 1: ', len(X))
+
+    for y in range(0, len(X)):
+        pila.Insertar(X[y])
+        #print(pila.tamPila())
+
+    for x in range(0, pila.tamPila()):
+        PilaAux.append(pila.Quitar())
+        #print(PilaAux)
+
+    print(pila.Comparar(PilaAux, Y))
+
+    return 0
+
+if __name__ == '__main__':
+    main()
