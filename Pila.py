@@ -8,8 +8,6 @@
 
 class aplicacionDePilas:
 
-    __PilaUno = ["B", "R", "Y", "A", "N", ]
-    __PilaDos = ["N", "A", "Y", "R", "B", ]
     __PilaAux = []
     __listaPila = []
 
@@ -51,29 +49,26 @@ class aplicacionDePilas:
                 return False
             return True
 
+#Método que accede a la clase aplicacionDePilas y así realizar la comparacion
 def main():
-
     pila = aplicacionDePilas()
 
     PilaAux = []
-    PilaAux2 = []
     X = ["B", "R", "Y", "A", "N"]
     Y = ["N", "A", "Y", "R", "B"]
 
-    #print('***1***')
-    #print('Tamaño de pila 1: ', len(X))
-
+    #Ciclo para ingresar la pila "X"
     for y in range(0, len(X)):
         pila.Insertar(X[y])
-        #print(pila.tamPila())
 
-    for x in range(0, pila.tamPila()):
+    #Ciclo para obtener la inversa de "X" y guardarla en una pila Auxiliar
+    for x in range(0, pila.getTamPila()):
         PilaAux.append(pila.Quitar())
-        #print(PilaAux)
 
+    #Mensaje para mostrar el resultado
     print(pila.Comparar(PilaAux, Y))
-
     return 0
 
+#Sentencia para acceder al método main que es el encargado de acceder a la clase aplicacionDePilas
 if __name__ == '__main__':
     main()
