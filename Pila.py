@@ -54,8 +54,8 @@ def main():
     pila = aplicacionDePilas()
 
     PilaAux = []
-    X = ["B", "R", "Y", "A", "N"]
-    Y = ["N", "A", "Y", "R", "B"]
+    X = ["L", "3", "O", "N", "E", "T"]
+    Y = ["T", "E", "N", "O", "3", "L"]
 
     #Ciclo para ingresar la pila "X"
     for y in range(0, len(X)):
