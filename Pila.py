@@ -1,11 +1,3 @@
-# Implementación de una pila para resolver el problema:
-
-""" De escribir un método para determinar si una secuencia de caracteres de entrada es de la forma:
-	X & Y.
-
-    Siendo X una cadena de caracteres y Y la cadena inversa.
-    El carácter & es el separador. """
-
 class aplicacionDePilas:
 
     __PilaAux = []
@@ -54,8 +46,8 @@ def main():
     pila = aplicacionDePilas()
 
     PilaAux = []
-    X = ["L", "3", "O", "N", "E", "T"]
-    Y = ["T", "E", "N", "O", "3", "L"]
+    X = ["E", "R", "R", "O", "R"]
+    Y = ["R", "O", "R", "R", "3"]
 
     #Ciclo para ingresar la pila "X"
     for y in range(0, len(X)):
